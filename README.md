@@ -48,7 +48,7 @@ flowchart LR
 | 2 | full run (only new lines) | 494,661 | 1,033,036 |
 | 3 | full run again | **0** | 1,033,036 |
 
-**Data contracts** (`src/etl/validate.py`): 11 Pandera checks. Examples: invoice format, unique `line_hash`, sales with positive quantity and price, `revenue = qty × price`. The contracts caught a real anomaly during development: a cancellation invoice with a *positive* quantity, now classified as an adjustment.
+**Data contracts** (`src/etl/validate.py`): Pandera rules on 11 columns plus 3 cross-column checks. Examples: invoice format, unique `line_hash`, sales with positive quantity and price, `revenue = qty × price`. The contracts caught a real anomaly during development: a cancellation invoice with a *positive* quantity, now classified as an adjustment.
 
 ## Business insights (SQL)
 
